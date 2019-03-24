@@ -1,0 +1,264 @@
+        @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+            html,
+            body {
+              height: 100%;
+              background-color: #fff;
+              font-family:Arial;
+            }
+
+            html,
+            body,
+            input,
+            textarea,
+            buttons {
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+            }
+
+            #header {
+              position: fixed;
+              top: 0;
+              right: 0;
+              left: 0;
+              z-index: 2;
+              transition: left 0.2s;
+            }
+
+            #sidedrawer {
+              position: fixed;
+              top: 0;
+              bottom: 0;
+              width: 200px;
+              left: -200px;
+              overflow: auto;
+              z-index: 2;
+              background-color: #E8E8E8;
+              transition: transform 0.2s;
+              color:#282828;
+            }
+
+            #content-wrapper {
+              min-height: 100%;
+              overflow-x: hidden;
+              margin-left: 0px;
+              transition: margin-left 0.2s;
+
+              margin-bottom: -160px;
+              padding-bottom: 160px;
+              color:#282828;
+            }
+
+            #footer {
+              height: 160px;
+              margin-left: 0px;
+              transition: margin-left 0.2s;
+            }
+
+            @media (min-width: 768px) {
+              #header {
+                left: 200px;
+              }
+
+              #sidedrawer {
+                transform: translate(200px);
+              }
+
+              #content-wrapper {
+                margin-left: 200px;
+              }
+
+              #footer {
+                margin-left: 200px;
+              }
+
+              body.hide-sidedrawer #header {
+                left: 0;
+              }
+
+              body.hide-sidedrawer #sidedrawer {
+                transform: translate(0px);
+              }
+
+              body.hide-sidedrawer #content-wrapper {
+                margin-left: 0;
+              }
+
+              body.hide-sidedrawer #footer {
+                margin-left: 0;
+              }
+            }
+
+            #sidedrawer.active {
+              transform: translate(200px);
+            }
+
+            .sidedrawer-toggle {
+              color:#fff;
+              cursor: pointer;
+              font-size: 20px;
+              line-height: 20px;
+              margin-right: 10px;
+            }
+
+            .sidedrawer-toggle:hover {
+              color: #E8E8E8;
+              text-decoration: none;
+            }
+
+       
+             #sidedrawer-brand {
+              padding-top:20px;
+              padding-left: 20px;
+            }
+
+            #sidedrawer ul {
+              list-style: none;
+            }
+
+            #sidedrawer > ul {
+              padding-left: 0px;
+            }
+
+            #sidedrawer > ul > li:first-child {
+              padding-top: 15px;
+            }
+
+            #sidedrawer strong {
+              display: block;
+              padding: 15px 22px;
+              cursor: pointer;
+            }
+
+            #sidedrawer strong:hover {
+              background-color: #282828;
+              text-decoration: none;
+              color:white;
+            }
+            
+            #sidedrawer a:visited{
+                color:white;
+                text-decoration: none;
+            }              
+            .active{
+               background-color: #ffb733; 
+            }
+
+            #sidedrawer strong + ul > li {
+              padding: 6px 0px;
+            } 
+
+            .mui-appbar{
+                background:#ffe025;
+                height:50px;
+            }
+            a.disable {
+                pointer-events: none;
+                cursor: default;
+                font-size:15px;
+                color:#282828;
+             }  
+             a{
+                 color:#282828;
+                 text-decoration: none;
+             }
+             a:hover{
+                 color:#C0C0C0;
+                 text-decoration: none;
+             }
+             .header{
+                 overflow: hidden;
+                 position:fixed;
+             }
+             mui--text-title{
+                 padding-top: 10px;
+             }
+            .modal-header {
+            	padding-bottom: 5px;
+            }
+            
+            .modal-footer {
+                	padding: 10px;
+            	}
+         
+                
+            .modal-footer .btn-group button {
+            	height:100%;
+            	border-top-left-radius : 0;
+            	border-top-right-radius : 0;
+            	border: none;
+            	border-right: 1px solid #ddd;
+            }
+            	
+            .modal-footer .btn-group:last-child > button {
+            	border-right: 0;
+            }
+            
+            .modal {
+              text-align: center;
+              padding: 0!important;
+             
+            }
+            
+            .modal:before {
+              content: '';
+              display: inline-block;
+              height: 100%;
+              vertical-align: middle;
+              margin-right: -4px;
+            }
+            
+            .modal-dialog {
+              display: inline-block;
+              text-align: left;
+              vertical-align: middle;
+            }  
+            tr {
+            padding-bottom:1%;
+            padding-top:1%;
+            
+           }
+        
+            td{
+                padding-bottom:1%;
+                padding-top:1%;
+                padding-right:1%;
+                font-size:20px;
+            }
+            hr{
+                background-color: #d3d3d3;
+            }
+
+            @media only screen and (min-width:180px) and (max-width:679px)
+            {
+            table
+            {
+             width:100%;
+            }
+            table .column1
+            {
+             visibility:hidden;
+             display:none;
+            }
+            table th
+            {
+             visibility:visible;
+             display:block;
+             font-size:20px;
+            }
+            input
+            {
+               -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+                position: auto;
+            }
+            }
+
+            .panel {
+                overflow: auto;
+                position: auto;
+                box-sizing: border-box;
+            }

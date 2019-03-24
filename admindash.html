@@ -1,0 +1,251 @@
+
+<!doctype html>
+    <html>
+    <title>Admin Dashboard</title>
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <link rel="shortcut icon" href="logow.png" type="image/png">
+            <link href="//cdn.muicss.com/mui-0.9.38/css/mui.min.css" rel="stylesheet" type="text/css" />
+            <script src="//cdn.muicss.com/mui-0.9.38/js/mui.min.js"></script>
+            <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+            <link href="css/bootstrap.css" rel="stylesheet" />
+            <link href="css/bootstrap-theme.css" rel="stylesheet" />
+            <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css" type="text/css"/>
+            <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+            <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
+            <link rel="shortcut icon" href="logow.png" type="image/png">
+            <link rel="stylesheet" href="css/scrolling-nav.css" type="text/css">
+            <link rel="stylesheet" href="bootstrap-datepicker.css" type="text/css"/>
+            <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+             <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
+            <script src="https://code.highcharts.com/modules/export-data.js"></script>
+            <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+            <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+            <link rel="stylesheet" href="main_css.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.bootstrap.min.css">
+            
+
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+            <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+            <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+            <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.1/js/responsive.bootstrap.min.js"></script>
+         <style>
+
+
+         </style>
+    <script>
+        ///
+          $(document).ready(function(){
+             
+             $('#sidebar').load("sideMenu.php");
+
+          });
+
+            $(document).ready(function() {
+                 $('#myTable').DataTable();
+            } );
+            $('#myTable').dataTable( {
+                responsive: true
+            } );
+            
+            jQuery(function($) {
+              var $bodyEl = $('body'),
+                  $sidedrawerEl = $('#sidedrawer');
+
+
+              function showSidedrawer() {
+                var options = {
+                  onclose: function() {
+                    $sidedrawerEl
+                      .removeClass('active')
+                      .appendTo(document.body);
+                  }
+                };
+
+                var $overlayEl = $(mui.overlay('on', options));
+
+                $sidedrawerEl.appendTo($overlayEl);
+                setTimeout(function() {
+                  $sidedrawerEl.addClass('active');
+                }, 20);
+              }
+
+
+              function hideSidedrawer() {
+                $bodyEl.toggleClass('hide-sidedrawer');
+              }
+
+
+              $('.js-show-sidedrawer').on('click', showSidedrawer);
+              $('.js-hide-sidedrawer').on('click', hideSidedrawer);
+            });
+            var $titleEls = $('strong', $sidedrawerEl);
+
+            $titleEls
+              .next()
+              .hide();
+
+            $titleEls.on('click', function() {
+              $(this).next().slideToggle(200);
+            });
+
+
+      </script>
+      </head>
+      <body>
+    <div id="sidebar" > </div>
+    <header id="header">
+      <div class="mui-appbar mui--appbar-line-height">
+        <div class="mui-container-fluid">
+            <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-xs-inline-block js-show-sidedrawer"><span class="glyphicon glyphicon-menu-hamburger" style="font-size:20px;padding-top: 10px;"></span></a>
+          <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer"><span class="glyphicon glyphicon-menu-hamburger" style="font-size:20px;padding-top: 10px;"></span></a>
+          <span class="mui--text-title mui--visible-xs-inline-block"></span>
+        </div>
+      </div>
+    </header>
+    <div id="content-wrapper">
+        
+        
+    <br>  
+    <br>
+   <center>  
+
+      <div class="row" style="padding:6%">
+
+        <div class="col-sm-4">
+          <div class="panel panel-default"  style="min-width: 310px; height: 500px; max-width: 600px; margin: 0 auto">
+            <div class="panel-body" >
+             <h3>Attendees</h3>
+             <h1>5 </h1>
+               <br>
+
+              <table class="table-responsive" width="100%">
+                <thead>
+                  <th>First Name</th>
+                  <th>Last Name </th>
+                </thead>
+                <tbody style="font-size: 5px;">
+                  <tr>
+                  <td>
+                    Harry
+                  </td>  
+                  <td>
+                    Styles
+                  </td>                
+                </tr> 
+
+                <tr>
+                  <td>
+                    Niall
+                  </td>  
+                  <td>
+                    Horan
+                  </td>                
+                </tr>  
+
+                <tr>
+                  <td>
+                    Liam
+                  </td>  
+                  <td>
+                    Payne
+                  </td>                
+                </tr> 
+
+                <tr>
+                  <td>
+                    Louis
+                  </td>  
+                  <td>
+                    Tomlinson
+                  </td>                
+                </tr>                  
+
+                <tr>
+                  <td>
+                    Zayn
+                  </td>  
+                  <td>
+                    Malik
+                  </td>                
+                </tr>          
+                </tbody>
+              </table> 
+              </div>
+          
+        </div>
+        </div>
+        <div class="col-sm-7">
+         <div class="panel panel-default">
+            <div class="panel-body" style="min-width: 310px; height: 500px; max-width: 600px; margin: 0 auto">
+              <div id="container" ></div>           
+              </div>
+          
+        </div>          
+        </div>
+
+   </center>
+    </div></div>
+  </body>
+    </html>
+    <script>
+
+// Build the chart
+Highcharts.chart('container', {
+  chart: {
+    plotBackgroundColor: null,
+    plotBorderWidth: null,
+    plotShadow: false,
+    type: 'pie'
+  },
+  title: {
+    text: 'Latest Event Rating'
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+        enabled: false
+      },
+      showInLegend: true
+    }
+  },
+  series: [{
+    name: 'Survey',
+    colorByPoint: true,
+    data: [{
+      name: 'Venue',
+      y: 61.41,
+      sliced: true,
+      selected: true
+    }, {
+      name: 'Keynote Speaker 1',
+      y: 11.84
+    }, {
+      name: 'Keynote Speaker 2',
+      y: 10.85
+    }, {
+      name: 'Time Management',
+      y: 4.67
+    }, {
+      name: '4',
+      y: 4.18
+    }, {
+      name: '5',
+      y: 7.05
+    }]
+  }]
+});      
+    </script>
+    

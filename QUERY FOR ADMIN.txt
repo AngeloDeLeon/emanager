@@ -1,0 +1,3 @@
+INSERT INTO `admin`(`username`, `password`) VALUES ('Admin1', MD5('EGSAdmin1'))
+
+INSERT INTO `admin`(`username`, `password`) VALUES ('Admin2', MD5('EGSAdmin2'))
